@@ -1,0 +1,22 @@
+```{r setup, include=FALSE}
+library(ggplot2)
+```
+
+```{r graphs}
+ggplot2::ggplot(OlsonChapter16::Flagstaff_Weather, aes(x=DATE,y=TMAX)) +
+  geom_point(color="red") +
+  scale_x_date(date_breaks = "5 year", date_minor_breaks = "1 month", date_labels = "%Y %b") +
+  theme(axis.text.x = element_text(angle = 90))
+ggplot2::ggplot(OlsonChapter16::Flagstaff_Weather, aes(x=DATE, y=TMIN)) +
+  geom_point(color="green") +
+  scale_x_date(date_breaks = "5 year", date_minor_breaks = "1 month", date_labels = "%Y %b") +
+  theme(axis.text.x = element_text(angle = 90))
+ggplot2::ggplot(OlsonChapter16::Flagstaff_Weather, aes(x=DATE, y=PRCP)) +
+  geom_point(color="blue") +
+  scale_x_date(date_breaks = "5 year", date_minor_breaks = "1 month", date_labels = "%Y %b") +
+  theme(axis.text.x = element_text(angle = 90))
+ggplot2::ggplot(OlsonChapter16::Flagstaff_Weather, aes(x=DATE, y=SNOW)) +
+  geom_point(color="black") +
+  scale_x_date(date_breaks = "5 year", date_minor_breaks = "1 month", date_labels = "%Y %b") +
+  theme(axis.text.x = element_text(angle = 90))
+```
